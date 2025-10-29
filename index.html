@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beka - Sua Assistente Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Botão de alternância de tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+        <span class="theme-icon">☀️</span>
+    </button>
+
+    <div class="container">
+        <!-- Tela Inicial (antes da primeira mensagem) -->
+        <div id="initial-view">
+            <h1 class="greeting">Olá Pedro Silva</h1>
+            <div class="input-box">
+                <input type="text" id="initial-input" placeholder="Pergunte alguma coisa">
+                <button id="initial-send-btn" aria-label="Enviar mensagem">
+                    <span class="send-icon">→</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela de Chat (após a primeira mensagem) -->
+        <div id="chat-view" class="hidden">
+            <div class="chat-header">
+                <h2>Beka sua assistente pessoal</h2>
+            </div>
+            <div id="chat-box" class="chat-box">
+                <!-- As mensagens do chat aparecerão aqui -->
+            </div>
+            <div class="input-area">
+                <button id="add-file-btn" class="add-file-btn" aria-label="Adicionar arquivo">
+                    <span class="add-icon">+</span>
+                </button>
+                <input type="text" id="user-input" placeholder="Pergunte alguma coisa">
+                <input type="file" id="file-upload" class="hidden" accept=".pdf,image/*">
+                <button id="send-btn" aria-label="Enviar mensagem">
+                    <span class="send-icon">→</span>
+                </button>
+            </div>
+            
+            <!-- Menu de opções de arquivo -->
+            <div id="file-options-menu" class="file-options-menu hidden">
+                <button class="file-option" data-type="image">📷 Enviar Imagem</button>
+                <button class="file-option" data-type="pdf">📄 Enviar PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
